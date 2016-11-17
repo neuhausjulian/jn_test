@@ -24,4 +24,16 @@ public class TestTest
 		
 		assertTrue(testInstance.add(valueOne, valueTwo) == validResult);
 	}
+	
+	@Test
+	public void addTestWhichWillFailByPurpose()
+	{
+		final int valueOne = 3;
+		final int valueTwo = 4;
+		final int validResult = 8;
+		
+		de.jn.test.Test testInstance = new de.jn.test.Test();
+		
+		assertTrue(testInstance.add(valueOne, valueTwo) == validResult);
+	}
 }
