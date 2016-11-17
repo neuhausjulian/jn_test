@@ -1,11 +1,10 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 addons:
   sonarqube: true
+script:
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=$SONAR_TOKEN
 env:
   global:
-    - secure: ********* # defines SONAR_TOKEN=abcdef0123456789
-script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarQube analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=$SONAR_TOKEN
+    secure: oxo0uT34iUXARTsIuSFpnaw00ZUhwUGhRfKLFlVwhQKjz9sKO41NIKACLJ/HVba2Zks1hOp4tIrLiuql62Nf3s/G6V7uXcCLhkhxW9N5inUMSLcoFbRBkE8OsfnLBxP3tbmLzAqLkdzX/IGdR3Fyi3Ew6qYlsZI8K2liAAGimK2N9SwJUIe9bS2v/Io40qsLVqmblNkqB6k+SWuZG30G2dX+9/Sd2tDcCGxpdAGeBveTmTq6OIYvFPFKo8zDUEcbBq0PLVkRvHYnNBLWSD3CiuxslWpQsoEvtQjt3+1qffOaW2KBtFTy8ndlnyNUbMmQR4gSbE+UFUAA6Iv+TnwGA+dyyalzvvFUw5Mf+UCFyaHB8OrUpDEO0Gyc2UEcUeioiDcS2rHMAXMUwej/VQAxdE4taMR933tQCUGgzBXS3JNHUQQ4pWOzUoVKW0yO+7FP4WZKBtgXr3hs3ufBJIRvvt/SXOzoonYtyjDEr7yS/79GfQDkks6Re7epiQZhBDUPDpsvPgk5B6QP3dI3dZBpyvzZM7ONxWUgVHqTsgOGMzv8OrfT6302pCon7Nvi8LHEFSEyqMuupXkU1e8mJFgJ0esOvP4gSX4eCQ5oYn0xLpLEMTIOoBG7gdi+DL+R9yf+EELG108ekgJ2LVh8cpi8aHraNc5JPG8f5NWTwEJqjLw=
