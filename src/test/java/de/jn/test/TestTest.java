@@ -13,15 +13,15 @@ import org.junit.Test;
  */
 public class TestTest
 {
-	@Test
-	public void addTest()
-	{
-		final int valueOne = 3;
-		final int valueTwo = 4;
-		final int validResult = 7;
+  @Test
+  public void addTest()
+  {
+    final int valueOne = 3;
+    final int valueTwo = 4;
+    final int validResult = 7;
 
-         	de.jn.test.Test testInstance = new de.jn.test.Test();
+    de.jn.test.Test testInstance = new de.jn.test.Test();
 
-		assertTrue(testInstance.add(valueOne, valueTwo) == validResult);
-	}
+    assertTrue(testInstance.add(valueOne, valueTwo) == validResult);
+  }
 }
