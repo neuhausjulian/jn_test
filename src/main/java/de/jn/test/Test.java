@@ -9,8 +9,9 @@ package de.jn.test;
  */
 public class Test
 {
-	public int add(int intOne, int intTwo)
-	{
+    public int add(int intOne, int intTwo)
+    {
+	    System.out.println(intOne + " | " + intTwo);
 		return intOne + intTwo;
 	}
 }
